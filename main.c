@@ -4,22 +4,23 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 int main(int argc, char *argv[]) 
 {
-	int i , average;
-	int sum = 0;
+	int i;
 	int grade[SIZE];
+	int score[SIZE];
 	
-	printf("%i명의 점수를 입력하세요.\n", SIZE);
+	for(i=0; i<SIZE; i++)
+	{
+	  grade[i] = rand()%100+1;
+	}
 	
-	for(i=0;i<SIZE;i++)
-	 {
-	 scanf("%d", &grade[i]);
-     sum += grade[i];
-     }
+	for (i=0; i<SIZE; i++)
+	{
+	score[i]=grade[i];
+    }
 	
-	average = sum / SIZE;
-	 	
-	printf("average = %d\n", average );
-	 
-	 
+	
+	for(i=0; i<SIZE ; i++)
+     printf("score[%i] %i : %i\n", i, score[i], grade[i]);
+	 	 
 	return 0;
 }
